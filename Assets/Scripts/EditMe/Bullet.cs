@@ -7,11 +7,11 @@ public class Bullet : MonoBehaviour
 
     // create a coroutine that waits for a few seconds and then disables this gameobject.
 
-    new Coroutine bulletWaitTime;
+    public new Coroutine bulletWaitTime;
     
      IEnumerator WaitToDisable()
     {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(5f);
         gameObject.SetActive(false);
     }
     // in OnEnable you can start that coroutine. in OnDisable you can StopAllCoroutines!
@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
     // every frame, update the bullet's position using transform.Translate
     private void Update()
     {
-        transform.Translate(Vector3.right);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
     // You probably want to make a speed variable. 

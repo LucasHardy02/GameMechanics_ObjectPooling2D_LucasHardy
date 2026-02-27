@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6066512602414727352}
   - component: {fileID: 570503473277559448}
+  - component: {fileID: 7318872211699411501}
   - component: {fileID: 3719265130044892325}
+  - component: {fileID: 5371230099176690269}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -47,6 +49,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
+--- !u!114 &7318872211699411501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554204340041069675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff8e04895b2d374084444ec162f1bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3530650254763423589, guid: c894aa61807d4a5488d4e109820c1cf8, type: 3}
+  poolSize: 20
+  numberOfBulletsToSpawn: 20
 --- !u!114 &3719265130044892325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +94,21 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &5371230099176690269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554204340041069675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3560635f1a70d469f28f77224189a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 6066512602414727352}
+  Enemy: {fileID: 0}
+  bulletPool: {fileID: 7318872211699411501}
 --- !u!1 &8414448379623099674
 GameObject:
   m_ObjectHideFlags: 0

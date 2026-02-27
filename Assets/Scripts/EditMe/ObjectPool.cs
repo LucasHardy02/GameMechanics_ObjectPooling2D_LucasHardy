@@ -32,18 +32,15 @@ public class ObjectPool : MonoBehaviour
     // create a method called GetGameObject which returns a GameObject. 
     public GameObject GetGameObject()
     {
-        return gameObject;
-
-        if (_pool.Count > 0)
+        foreach(GameObject bullet in _pool)
         {
-            GameObject bullet = _pool[0];
-            _pool.RemoveAt(0);
-            return bullet;
+            if (bullet.activeInHierarchy == false)
+            {
+                return bullet;
+            }
+           
         }
-        else
-        {
-            return null;
-        }
+        return null;
     }
     // It should look for a GameObject which is not active, returning the first one that it finds. 
     // If there is no inactive one, return null. 
